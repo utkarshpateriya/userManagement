@@ -2,10 +2,12 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+venv
 # C extensions
 *.so
-
+venv
+alembic
+alembic.ini
 # Distribution / packaging
 .Python
 build/
