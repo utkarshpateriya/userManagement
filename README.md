@@ -9,5 +9,7 @@ Steps to reproduce-
 3. If the project runs successfully, do `alembic init alembic`
    1. This will generate an alembic folder that will be used for migrations. In that, import Base that is persent in
    the file database.py. For e.g `from database import Base`
-    `target_metadata = Base.metadata` and set target_metadata to the way it is shown above then run
-4. `alembic revision --autogenerate -m "Initial migrations"` if it says something like Target database is not up to date then run `alembic upgrade head` then do again `alembic revision --autogenerate -m "Initial migrations"`
+   2. It is important to import all the models in the same env.py file for e.g-
+      `from models.userModel import *` and `from models.itemModel import *`.
+   3. `target_metadata = Base.metadata` and set target_metadata to the way it is shown above then run
+4. `alembic revision --autogenerate -m "Initial migrations"` if it says something like Target database is not up to date then run `alembic upgrade head` then do again `alembic revision --autogenerate -m "Initial migrations"` and at last run `alembic upgrade head`
