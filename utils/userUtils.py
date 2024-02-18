@@ -4,11 +4,10 @@ from sqlalchemy.orm import Session
 from models.userModel import UserModal
 from fastapi import HTTPException, status
 from jose import jwt
+from config import SECRET_KEY, ALGORITHM
 
 class UserUtils:
     pwd_context = CryptContext(schemes=["sha256_crypt"])
-    SECRET_KEY = "your-secret-key"
-    ALGORITHM = "HS256"
 
     def get_password_hash(self, password: str) -> str:
         return self.pwd_context.hash(password)
@@ -18,7 +17,7 @@ class UserUtils:
     
     def create_access_token(self, data: dict):
         to_encode = data.copy()
-        return jwt.encode(to_encode, self.SECRET_KEY, algorithm=self.ALGORITHM)
+        return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     
     def create_user(self, user: userSchema.CreateUser, db: Session):
         # check if username exists
