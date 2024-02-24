@@ -116,5 +116,3 @@ This project is configured to use either MySQL or PostgreSQL. Modify the databas
 
 ###   Contributors
 Utkarsh Pateriya
-
-Feel free to contribute and enhance the project!
