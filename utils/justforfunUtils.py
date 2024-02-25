@@ -3,6 +3,11 @@
 class JustForFunUtil:
 
     def flatten_the_dict(self, simple_dict):
+        """
+        Flatens the dict such that if a nested dict is given
+        , no matter how many levels of nesting is present. It recursively
+        flatens the dict all in single level.
+        """
         ans_dict = {}
 
         def flatten_dict(parent_key, dict_val):
