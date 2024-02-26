@@ -1,7 +1,10 @@
 
 
 class JustForFunUtil:
-
+    """
+    Going to push more comments like these
+    `print("Just for fun")`    
+    """
     def flatten_the_dict(self, simple_dict):
         """
         Flatens the dict such that if a nested dict is given
