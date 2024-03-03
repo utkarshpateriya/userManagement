@@ -47,7 +47,7 @@ class JustForFunUtil:
         return str(binary)
 
     def generate_totp(self, secret, digits=10, timeref=0, timestep = 30):
-        """TOTP, time-based variant of HOTP
+        """TOTP, time-based HOTP
         digits control the response length
         the C in HOTP is replaced by ( (currentTime - timeref) / timestep )
         """
