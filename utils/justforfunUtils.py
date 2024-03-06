@@ -50,6 +50,7 @@ class JustForFunUtil:
         """TOTP, time-based HOTP
         digits control the response length
         the C in HOTP is replaced by ( (currentTime - timeref) / timestep )
+        sets the TOTP for 30 seconds validation
         """
         C = int (time.time() - timeref ) // timestep
         return self.HOTP(secret, C, digits = digits)
