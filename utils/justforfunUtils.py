@@ -41,7 +41,7 @@ class JustForFunUtil:
         return self.Truncate(hmac_sha512)[-digits:]
     
     def Truncate(self, hmac_sha512):
-        """truncate sha512 value to something useful to be used in future"""
+        """truncate sha512 value"""
         offset = int(hmac_sha512[-1], 16)
         binary = int(hmac_sha512[(offset *2):((offset*2)+8)], 16) & 0x7FFFFFFF
         return str(binary)
